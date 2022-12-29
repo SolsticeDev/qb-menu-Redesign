@@ -1,0 +1,179 @@
+/* Nice font for button from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Contrail One', cursive;
+    font-weight: 300;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #171717e6;
+    
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    top: 20%;
+    right: 20%;
+    border-radius: 5px;
+    background: transparent !important;
+}
+.button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row !important;
+    gap: 10px;
+}
+.title {
+    cursor: default;
+    gap: 10px;
+    display: flex;
+    flex-direction: row !important;
+    font-family: 'Contrail One', cursive;
+    font-size: 20px;
+}
+
+#buttons {
+    max-height: 75vh;
+    width: 300px;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+html,
+body {
+    background: transparent !important;
+}
+
+.button {
+    width: auto;
+    height: 10%;
+    background: rgb(0, 0, 0);
+    color: white;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    padding: 0.45rem;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0.5rem 0.05rem #000000;
+    cursor: pointer;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+}
+
+.button:hover {
+    color: linear-gradient(-45deg, #050505e1, #000000,#646464d5,#000000ef,#000000d5);
+    background: linear-gradient(-45deg, #6d6d6de1, #000000,#646464d5,#000000ef,#5a5a5ad5);
+    box-shadow: 0 0 10px rgb(10, 0, 0);
+    animation:gradient 10s ease infinite,8s rotate linear infinite;
+    border: 1.8px solid;
+    border-image: linear-gradient(var(--angle), #000000d5,#333333d5,#181818d0,#6f00ff00,#fafafae1) 1;
+}
+
+
+
+.title {
+    width: auto;
+    height: 10%;
+    background: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: auto;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    padding: 0.45rem;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0.5rem 0.05rem #00000000;
+    font-family: 'Contrail One', cursive;
+}
+
+.title > div.column > div.header {
+    text-decoration: underline !important;
+}
+
+.disabled {
+    background: rgba(0, 0, 0, 0.9) !important;
+    cursor: default;
+}
+
+.disabled:hover {
+    background: linear-gradient(-45deg, #6d6d6de1, #000000,#646464d5,#000000ef,#5a5a5ad5);
+    cursor: default;
+    color: linear-gradient(-45deg, #050505e1, #000000,#646464d5,#000000ef,#000000d5);
+}
+
+div > .text {
+    flex-direction: column;
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+div > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+@keyframes rotate {
+    to {
+      --angle: 360deg;
+      border-radius: 7px;
+    }
+  }
+  @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: true;
+  }
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        border-radius: 7px;
+    }
+    50% {
+        background-position: 100% 50%;
+        border-radius: 7px;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
